@@ -20,6 +20,7 @@ Loops are used for:
 ☸️ Kubernetes operations
 🌐 Health checks
 🚀 Deployment automation
+
 🔁 1. for Loop
 📌 Definition
 
@@ -30,6 +31,7 @@ for variable in values
 do
     commands
 done
+
 ✅ Example 1 — Print Numbers
 #!/bin/bash
 
@@ -37,12 +39,14 @@ for i in 1 2 3 4 5
 do
     echo "Number: $i"
 done
+
 ▶️ Output
 Number: 1
 Number: 2
 Number: 3
 Number: 4
 Number: 5
+
 📂 Example 2 — Create Multiple Files
 #!/bin/bash
 
@@ -50,6 +54,7 @@ for i in 1 2 3
 do
     touch file$i.txt
 done
+
 📖 What This Does?
 
 Creates:
@@ -57,12 +62,14 @@ Creates:
 file1.txt
 file2.txt
 file3.txt
+
 🔁 2. Range-Based Loop
 📌 Syntax
 for i in {1..5}
 do
     commands
 done
+
 ✅ Example
 #!/bin/bash
 
@@ -70,6 +77,7 @@ for i in {1..5}
 do
     echo "DevOps"
 done
+
 🔄 3. while Loop
 📌 Definition
 
@@ -80,6 +88,7 @@ while [ condition ]
 do
     commands
 done
+
 ✅ Example
 #!/bin/bash
 
@@ -91,12 +100,14 @@ do
 
     count=$((count + 1))
 done
+
 ▶️ Output
 Count: 1
 Count: 2
 Count: 3
 Count: 4
 Count: 5
+
 🧠 Understanding Increment
 Example
 count=$((count + 1))
@@ -116,6 +127,7 @@ do
     echo "Monitoring Server..."
     sleep 2
 done
+
 📖 Understanding sleep
 Command	Purpose
 sleep 2	Waits 2 seconds
@@ -124,8 +136,11 @@ sleep 2	Waits 2 seconds
 Press:
 
 CTRL + C
+
 ⚙️ Real DevOps Example
+
 📊 Server Monitoring Script
+
 #!/bin/bash
 
 while true
@@ -136,6 +151,7 @@ do
 
     sleep 5
 done
+
 📖 What This Script Does?
 
 ✅ Shows current time
@@ -147,6 +163,7 @@ Used in:
 monitoring
 troubleshooting
 production systems
+
 📂 Backup Automation Example
 #!/bin/bash
 
@@ -154,6 +171,7 @@ for file in *.txt
 do
     cp $file backup/
 done
+
 📖 What This Does?
 
 Copies all .txt files into backup folder automatically.
@@ -170,18 +188,22 @@ for i in {1..10}
 do
     echo "Welcome DevOps Engineer"
 done
+
 Give Permission
 chmod +x loop.sh
+
 Run Script
 ./loop.sh
+
+
 🎯 Important Commands Summary
 Command	Purpose
 for	Repeat commands
 while	Loop with condition
 done	End loop
 sleep	Delay execution
-💡 Key Learnings
 
+💡 Key Learnings
 ✅ Loops automate repetitive tasks
 ✅ for loop works with lists/ranges
 ✅ while loop works with conditions
